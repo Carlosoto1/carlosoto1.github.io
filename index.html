@@ -1,12 +1,174 @@
 <!DOCTYPE html>
+<!-- Etiqueta <html> := engloba el documento entero -->
 <html lang="es">
+<!-- <head> contiene los metadatos (<meta ...>) y las importaciones con <link ...> a veces, también puede tener scripts -->
 <head>
-  <meta charset="UTF-8" />
-  <title>Mi primera página</title>
+  <!-- Metadatos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- El título de la pestaña en el navegador -->
+  <title>Portafolio</title>
+  <!-- Importaciones: favicon (icono de la pestaña) y una hoja de estilos -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+  <!-- Fuentes -->
+  <!-- Scripts -->
+  <style>
+    /* Establecer el color del texto a blanco */
+    body {
+      color: #0b0b0b;  /* Todo el texto en blanco */
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    /* Enlaces con color azul */
+    a {
+      color: #1e90ff;  /* Azul para los enlaces */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline; /* Subraya los enlaces cuando pasa el ratón */
+    }
+  </style>
+  <style>
+    /* Fondo para toda la página */
+    body {
+      background-image: url('Fondo4.jpg');  /* Ruta de tu imagen de fondo */
+      background-size: cover;  /* La imagen cubre toda la página */
+      background-position: center;  /* Centra la imagen */
+      margin: 0;  /* Elimina márgenes */
+      height: 100vh;  /* Asegura que la página ocupe todo el alto de la ventana */
+    }
+  </style>
 </head>
+<!-- <body> := contenido del documento -> la parte visible del documento -->
 <body>
-  <h1>¡Hola, mundo!</h1>
-  <p>Esta es mi primera página web.</p>
-  <img  width="150" src="mono.jpg" alt="avatar">
-  <p><a href="https://github.com/Carlosoto1" >Mi perfil de GitHub</a></p>
+  <!-- Cabecera -> título de la página -->
+  <header>
+    <h1>Carlos soto velasquez</h1>
+    <p><strong>Estudiante</strong> Ciberserguridad y back-end
+  </header>
+  <hr>
+  <!-- Navegación -> lista de enlaces -->
+  <nav>
+    <ul>
+      <!-- Colocamos # delante del acerca-de para indicar que es un id en la misma página -->
+      <li><a href="#informacion">informacion</a></li>   
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <hr>
+  <!-- Acerca de -->
+  <section>
+    <header>
+      <!-- Colocamos el id al que vamos a enlazar SIN # aquí: -->
+      <h1 id="informacion">Informacion</h1>
+    </header>
+    
+    <!-- Usamos un <div> para contener los elementos de la bio: -->
+    <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+      <!-- Breve biografía o texto descriptivo de nuestro perfil -->
+      <h2>Carlos Soto</h2>
+      <!-- Texto de la biografía -->
+      <p>Apasionado por la protección de sistemas y redes. Me especializo en análisis de vulnerabilidades, pruebas de penetración y fortalecimiento de la seguridad en entornos Linux. 
+        Manejo herramientas como <strong>Wireshark, Nmap, Burp Suite y Metasploit</strong>, y siempre busco mejorar mis habilidades en seguridad ofensiva y defensiva. 
+        Estoy enfocado en comprender cómo operan los atacantes para construir defensas más fuertes.</p>
+      <p>Desarrollador Back-End enfocado en crear APIs seguras y eficientes con tecnologías como HTML, Node.js, Python, PostgreSQL y MongoDB.</p>
+      </div>
+      <!-- Imagen -->
+
+      <img src="fotocarlos.jpg"Mi foto de perfil width="150">
+      <div>
+        <style>
+          /* Estilos para alinear los íconos */
+          #redes-sociales {
+            display: flex; /* Esto pone los íconos en fila */
+            gap: 15px; /* Espacio entre los íconos */
+            justify-content:under; /* Centra los íconos en la página *ya que lo puse debajo de la foto*/
+          }
+          #redes-sociales img {
+            width: 80px; /* Tamaño de los íconos */
+            height: 80px;
+            cursor: pointer; /* Puntero cuando pasas el mouse sobre el ícono */
+          }
+        </style>
+      </head>
+      <body>
+      
+        <!-- Sección de íconos -->
+        <section id="redes-sociales">
+          <!--enlace a github-->
+          <a href="https://github.com/Carlosoto1" target="_blank">
+            <img src="github2.png" alt="GitHub">
+          </a>
+          <!--enlace a linkedin-->
+          <a href="https://www.linkedin.com/in/carlos-soto-446003231/" target="_blank">
+            <img src="logo-Linkedin.png" alt="LinkedIn">
+          </a>
+        </section>
+        
+      </div>
+
+  </section>
+  
+  <hr>
+
+  <!-- Tecnologías -->
+  <section>
+    <h1 id="tecnologias"> tecnologias</h1>
+    <!-- <article> := elemento independiente que se repite en nuestra página -->
+    <!-- Tarjetas con información de las tecnologías web que vamos a usar -->
+    <article>
+      <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+        <h2>HTML</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logo de HTML5" width="150">
+        <p>HTML es un lenguaje de marcado que sirve para crear las páginas web.</p>
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Más sobre HTML</a>
+      </div>
+    </article>
+    <article>
+      <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+        <h2>CSS</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg" alt="Logo de CSS" width="150">
+        <p>CSS es un lenguaje que sirve para describir los estilos de los elementos del front-end (HTML, componentes JSX, etc.)</p>
+        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">Más sobre CSS</a>
+      </div>
+    </article>
+    <article>
+    <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+      <h2>JS</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/250px-Unofficial_JavaScript_logo_2.svg.png" alt="logo de js" width="150">
+      <p>JavaScript (JS) es un lenguaje de programación que se utiliza principalmente para crear interactividad en páginas web</p>
+      <a href="https://simple.wikipedia.org/wiki/JavaScript" target="_blank">Mas sobre js</a>
+      </div>
+     </article> 
+    <hr>
+    <article>
+      <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+        <h2>Python</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/225px-Python-logo-notext.svg.png" alt="Logo de Python" width="150">
+        <p>Python es un lenguaje de programación de alto nivel, interpretado, y de propósito general. Es ampliamente utilizado en desarrollo web, análisis de datos, inteligencia artificial, automatización de tareas, y más. </p>
+          <p>Es conocido por su sintaxis simple y legible, lo que lo hace ideal para principiantes.</p>
+        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">Más sobre pyhton </a>
+      </div>
+    </article>
+  </section>
+  <!-- Contacto -->
+  <hr>
+  <section>
+    <h1 id="contacto"> Contacto</h1>
+    <!-- Form de contacto -->
+  
+  <footer>
+    <!-- Nombre, logo, enlaces de navegación, etc. -->
+    <img src="logo.jpg" alt="Logo" width="70">
+    <p>carlos soto</p>
+    <p>2025</p>
+    <p>telefono:633676692</p>
+    <p>carli_velasquez@hotmail.com</p>
+  </footer>
+</section>
 </body>
+</html>
